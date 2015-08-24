@@ -6,8 +6,7 @@
 [MATLAB's Optimization Toolbox](http://www.mathworks.com/products/optimization/) tackles wide variety of solvers such as linear programming, mixed-integer linear programming, quadratic programming, nonlinear optimization. In this tutorial, we learn how to use simulated annealing to find the minimum of a function. The test function is the well known Rosenbrock function. 
 
 
-![fig 1](https://github.com/OSGConnect/tutorial-matlab-tutorial-matlab-SimulatedAnnealing/blob/master/Figs/RosenBrockFunction.png)
-
+![fig 1](https://github.com/OSGConnect/tutorial-matlab-SimulatedAnnealing/blob/master/Figs/RosenBrockFunction.png)
 Fig.1. Two dimensional Rosenbrock function along x-y plane.  
 
 ## Tutorial files
