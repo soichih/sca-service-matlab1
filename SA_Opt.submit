@@ -1,0 +1,16 @@
+Universe = vanilla  
+
+Output = Log/job.$(Process).out 
+Error =  Log/job.$(Process).err
+Log =    Log/job.$(Process).log
+
+Executable =  run_SA_Opt.sh
+
+Arguments = "/cvmfs/oasis.opensciencegrid.org/osg/modules/matlab/2014b/v84/ $(Process)"
+
+transfer_input_files =  SA_Opt
+
+requirements = HAS_CVMFS_oasis_opensciencegrid_org =?= True
+
+queue 1
+
