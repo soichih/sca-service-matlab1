@@ -97,6 +97,10 @@ Now you have submitted the an ensemble of 10 jobs. The jobs should be finished q
 Each job produce rosen-sa-opt$(Process).dat file, where $(Process) is the process ID that runs from 0 to 9. 
 
 ## Post process 
+After all jobs finished, we want to gather the output data. The script `post-script.bash` gathers the output values and numerically sort 
+them according to function values. 
+
+    $ post-script.bash⋅
 
 
 ## Getting Help
