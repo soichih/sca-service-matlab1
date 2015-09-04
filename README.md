@@ -1,4 +1,4 @@
-[title]: - "Matlab - Optimization Tool box: Simulated Annealing"
+[title]: - "Optimization Tool box: Simulated Annealing"
 [TOC]
 
 ## Overview
