@@ -21,7 +21,7 @@ This will create a directory `tutorial-matlab-SimulatedAnnealing`. Inside the di
     simple_objective.m     # matlab script - defines the actual objective function
     SA_Opt                 # matlab compiled binary
     SA_Opt.submit          # Condor job description file
-    run_SA_Opt.sh          # Executable file
+    SA_Opt.sh          # Executable file
     Log/                   # Directory to copy standard output, error and log files from condor jobs.
 
 
@@ -61,7 +61,8 @@ As mentioned in the previous section (link here), we need to compile the matlab 
 
     mcc -m -R -singleCompThread -R -nodisplay -R -nojvm SA_Opt.m
 
-would produce the files: matrix, run_SA_Opt.sh, mccExcludedFiles.log and readme.txt files.  The file `SA_Opt` is the compiled binary file. "run_SA_Opt.sh" is the script file that executes the binary. 
+would produce the files: matrix, SA_Opt.sh, mccExcludedFiles.log and readme.txt files.  The file `SA_Opt` is the compiled binary file that we 
+would like to run on OSG Connect. 
 
 ## Job execution and submission files
 
@@ -70,7 +71,7 @@ Let us take a look at `SA_Opt.submit` file:
 
     Universe = vanilla                          # One OSG Connect vanilla, the prefered job universe is "vanilla"
 
-    Executable =  run_SA_Opt.sh    # Job execution file which is transfered to worker machine
+    Executable =  SA_Opt.sh    # Job execution file which is transfered to worker machine
     Arguments = "/cvmfs/oasis.opensciencegrid.org/osg/modules/matlab/2014b/v84/ $(Process) "   # list of arguments: (1) path of matlab runtime libraries.  (2) process ID. 
     transfer_input_files = SA_Opt               # list of file(s) need be transfered to the remote worker machine 
 
