@@ -72,7 +72,7 @@ Let us take a look at `SA_Opt.submit` file:
     Universe = vanilla                          # One OSG Connect vanilla, the prefered job universe is "vanilla"
 
     Executable =  SA_Opt.sh    # Job execution file which is transfered to worker machine
-    Arguments = "/cvmfs/oasis.opensciencegrid.org/osg/modules/matlab/2014b/v84/ $(Process) "   # list of arguments: (1) path of matlab runtime libraries.  (2) process ID. 
+    Arguments = $(Process)     #  process ID passed as an argument
     transfer_input_files = SA_Opt               # list of file(s) need be transfered to the remote worker machine 
 
     Output = Log/job.$(Process).out⋅            # standard ouput 
