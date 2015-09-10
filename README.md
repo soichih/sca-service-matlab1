@@ -56,13 +56,14 @@ The simulated annealing script calls the objective function and optimizes via `s
 In the above script, the optimizatoin is repeated for five times with random intial conditions. 
 
 ## MATLAB runtime execution
-
-As mentioned in the previous section (link here), we need to compile the matlab script on a machine with license. At present, we don't have license for matlab on OSG conect.  On a machine with matlab license, invoke the compiler `mcc`. We turn off all graphical options (-nodisplay), disable Java (-nojvm), and instruct MATLAB to run this program as a single-threaded application (-singleCompThread). The flag -m means `c` language translation during compilation. 
+As mentioned in the [lesson on basics of MATLAB compilation] (https://support.opensciencegrid.org/support/solutions/articles/5000660751-basics-of-compiled-matlab-applications-hello-world-example), we need to compile the matlab script on a machine with license.  At present, we don't have license for matlab on OSG-Conect. On a 
+machine with matlab license, invoke the compiler `mcc`. It is important to turn off all 
+graphical options (-nodisplay), disable Java (-nojvm), and instruct MATLAB to run this 
+program as a single-threaded application (-singleCompThread). The flag -m means `c` language translation during compilation. 
 
     mcc -m -R -singleCompThread -R -nodisplay -R -nojvm SA_Opt.m
 
-would produce the files: matrix, SA_Opt.sh, mccExcludedFiles.log and readme.txt files.  The file `SA_Opt` is the compiled binary file that we 
-would like to run on OSG Connect. 
+would produce the files: matrix, SA_Opt.sh, mccExcludedFiles.log and readme.txt files.  The file `SA_Opt` is the compiled binary file that we would like to run on OSG Connect. 
 
 ## Job execution and submission files
 
