@@ -53,7 +53,7 @@ The simulated annealing script calls the objective function and optimizes via `s
         end
         fclose(fileID);
 
-In the above script, the optimizatoin is repeated for five times with a random intial condition. 
+In the above script, the optimizatoin is repeated for five times with random intial conditions. 
 
 ## MATLAB runtime execution
 
@@ -83,6 +83,21 @@ Let us take a look at `SA_Opt.submit` file:
 
     queue 10                                   # Submit 10  jobs
 
+The above job description instructs condor to submit 10 jobs. Each job would start with different random 
+intial conditions. 
+
+The executable is a wrapper⋅ script `SA_Opt.sh`
+
+    #!/bin/bash⋅
+    source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash
+    module load matlab/2014b
+    chmod +x SA_Opt
+    ./SA_Opt $1
+
+that loads the module `matlab/2014b` and executes the MATLAB compiled binary `SA_Opt`. The only required 
+argument is a numerical⋅label that would be attached with the name of the output file. 
+
+
 
 ## Job submision 
 
@@ -98,8 +113,8 @@ Now you have submitted the an ensemble of 10 jobs. The jobs should be finished q
 Each job produce rosen-sa-opt$(Process).dat file, where $(Process) is the process ID that runs from 0 to 9. 
 
 ## Post process 
-After all jobs finished, we want to gather the output data. The script `post-script.bash` gathers the output values and numerically sort 
-them according to function values. 
+After all jobs finished, we want to gather the output data. The script `post-script.bash` gathers the 
+output values and numerically sort them according to function values. 
 
     $ post-script.bash⋅
 
