@@ -13,6 +13,7 @@ Fig.1. Two dimensional Rosenbrock function along x-y plane.
 ## Tutorial files
 
 It is easiest to start with the `tutorial` command. In the command prompt, type
+
 	 $ tutorial tutorial-matlab-SimulatedAnnealing # Copies input and script files to the directory tutorial-matlab-SimulatedAnnealing.
  
 This will create a directory `tutorial-matlab-SimulatedAnnealing`. Inside the directory, you will see the following files
@@ -63,7 +64,8 @@ program as a single-threaded application (-singleCompThread). The flag -m means 
 
     mcc -m -R -singleCompThread -R -nodisplay -R -nojvm SA_Opt.m
 
-would produce the files: matrix, SA_Opt.sh, mccExcludedFiles.log and readme.txt files.  The file `SA_Opt` is the compiled binary file that we would like to run on OSG Connect. 
+would produce the files: `SA_Opt, run_SA_Opt.sh, mccExcludedFiles.log and readme.txt`.  The file `SA_Opt` 
+is the compiled binary file that we would like to run on OSG Connect. 
 
 ## Job execution and submission files
 
