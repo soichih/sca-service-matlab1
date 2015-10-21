@@ -4,7 +4,7 @@ Executable = SA_Opt.sh
 Arguments = $(Process)
 transfer_input_files =  SA_Opt
 
-requirements = HAS_CVMFS_oasis_opensciencegrid_org =?= True  && OpSysMajorVer > 6 
+requirements = HAS_CVMFS_oasis_opensciencegrid_org =?= True  && OpSysMajorVer > 5 
 
 Output = Log/job.$(Process).out 
 Error =  Log/job.$(Process).err
