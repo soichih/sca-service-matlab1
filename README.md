@@ -54,7 +54,7 @@ The simulated annealing script calls the objective function and optimizes via `s
         end
         fclose(fileID);
 
-In the above script, the optimizatoin is repeated for five times with random intial conditions. 
+In the above script, the optimization is repeated for five times with random initial conditions. 
 
 ## MATLAB runtime execution
 As mentioned in the [lesson on basics of MATLAB compilation] (https://support.opensciencegrid.org/support/solutions/articles/5000660751-basics-of-compiled-matlab-applications-hello-world-example), we need to compile the matlab script on a machine with license.  At present, we don't have license for matlab on OSG-Conect. On a 
@@ -108,7 +108,7 @@ We submit the job using `condor_submit` command as follows
 
 	$ condor_submit SA_Opt.submit //Submit the condor job description file "SA_Opt.submit"
 
-Now you have submitted the an ensemble of 10 jobs. The jobs should be finished quickly (less than an hour). You can check the status of the submitted job by using the `condor_q` command as follows
+Now you have submitted an ensemble of 10 jobs. The jobs should be finished quickly (less than an hour). You can check the status of the submitted job by using the `condor_q` command as follows
 
 	$ condor_q username  # The status of the job is printed on the screen. Here, username is your login name.
 
