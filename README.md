@@ -82,8 +82,8 @@ Let us take a look at `SA_Opt.submit` file:
     Output = Log/job.$(Process).out⋅            # standard ouput 
     Error =  Log/job.$(Process).err             # standard error
     Log =    Log/job.$(Process).log             # log information about job execution
-
-    requirements = HAS_CVMFS_oasis_opensciencegrid_org =?= True   # Check if the worker machine has CVMFS 
+    
+    requirements = HAS_MODULES == True
 
     queue 10                                   # Submit 10  jobs
 
