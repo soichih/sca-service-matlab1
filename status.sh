@@ -13,10 +13,10 @@ fi
 if [ -f pid ]; then
     kill -0 `cat pid` 2> /dev/null
     if [ $? -eq 0 ]; then
-        echo "stopped before finishing"
+        echo "running"
         exit 0
     else
-        echo "stopped running"
+        echo "stopped running before finishing"
         exit 2
     fi
 fi

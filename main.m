@@ -1,7 +1,7 @@
 %Simulated Annealing optimization of a given function
 
-function SA_Optimization(fnumber)
-    filenumber = num2str(fnumber);
+function [] = main()
+    filenumber = num2str(1000);
     outfilename = sprintf ( '%s%s%s', 'rosen-sa-opt', filenumber, '.dat' );
     fileID = fopen(outfilename,'w');
 

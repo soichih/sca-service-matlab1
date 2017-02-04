@@ -6,4 +6,5 @@ if [ -z $SERVICE_DIR ]; then
 fi
 
 export MATLABPATH=$SERVICE_DIR
-nohup matlab -r SA_Optimization 10000 &
+nohup matlab -r main &
+echo $! > pid
