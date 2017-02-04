@@ -15,3 +15,4 @@ function SA_Optimization(fnumber)
     end
     fclose(fileID);
 
+    save('finished', 0);

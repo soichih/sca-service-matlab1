@@ -1,0 +1,23 @@
+{
+  "name": "sca-service-matlabtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start.sh",
+    "stop": "stop.sh",
+    "start": "start.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soichih/sca-service-matlabtest.git"
+  },
+  "keywords": [],
+  "author": "Soichi Hayashi <hayashis@iu.edu> (http://soichi.us)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soichih/sca-service-matlabtest/issues"
+  },
+  "homepage": "https://github.com/soichih/sca-service-matlabtest#readme"
+}
